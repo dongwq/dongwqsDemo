@@ -1,0 +1,62 @@
+Examples：
+1、import In.js to your webpage
+
+例如：底层框架为jQuery 1.5.2-min.js，并引用in时自动加载。
+
+<script type="text/javascript" src="in.js" autoload="true" core="jquery 1.5.2-min.js"></script>
+2、In.add()
+
+加载三个待执行的javascript模块，分别为mod1、mod2、mod3，其中mod2依赖于mod3.
+
+<script type="text/javascript">
+    In.add('mod1',{path:'mod1.js',type:'js',charset:'utf-8'});
+    In.add('mod2',{path:'mod2.js',type:'js',charset:'utf-8',rely:['mod3']});
+    In.add('mod3',{path:'mod3.js',type:'js',charset:'utf-8'});
+</script>
+3、In() or In.exe()
+
+顺序执行mod1,mod2,function，立即执行
+
+<script type="text/javascript">
+    //真正的加载顺序为 mod1 -> mod2 -> mod3 -> function -> function
+    var demo=In('mod1','mod2',function() {
+        alert('no return value');
+    },function() {
+        alert($);
+        return 'hello';
+    });
+    //demo={returns:[undefined,'hello'],complete:true}
+</script>
+4、In.ready()
+
+domReady之后加载队列
+
+<script type="text/javascript">
+    In.ready('mod1','mod2',function() {
+        alert($);
+    });
+</script>
+5、In.watch()
+
+监视某一变量值
+
+<script type="text/javascript">
+    var o={p:1};
+    In.watch(o,'p',function(prop,old,new) {
+        console.log(prop);
+        console.log(old);
+        console.log(new);
+    });
+    o.p=2;
+    -----console-----
+    >'p'
+    >1
+    >2
+</script>
+6、In.unwatch()
+
+取消对某一变量的监视
+
+<script type="text/javascript">
+    In.watch(o,'p');
+</script>

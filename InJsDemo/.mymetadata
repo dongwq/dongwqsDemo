@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="InJsDemo"
+  id="myeclipse.1312338827234"
+  context-root="/InJsDemo"
+  j2ee-spec="5.0"
+  archive="InJsDemo.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
