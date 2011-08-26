@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script type="text/javascript" src="js/in/in.js" autoload="true" core="js/jquery/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="js/in/jsResConfig.js" ></script>
+		
+		<script type="text/javascript">
+			In.ready('jqm');
+		</script> 
+	</head>
+	<body>
+
+		<div data-role="page" id='main_page' data-theme='b'>
+
+			<div data-role="header" data-theme='b'>
+				<h1 id='my_home'>
+					Home page
+				</h1>
+				<a href='#settings' data-icon='gear' class='ui-btn-right'>Options</a>
+			</div>
+			<!-- /header -->
+
+			<div data-role="content">
+				<p>
+					Page content goes here.<br/>
+					Page content goes here.<br/>
+					
+				</p>
+				<div data-role='fieldcontain' >
+					input field
+					<label for='name'>My Name:</label>
+					<input type='text' name='name' id='name'/>
+					textArea
+					<label for='textarea'>My Name:</label>
+					<textarea cols='40' rows='8' name='textarea' id='textarea'>
+
+					</textarea>
+
+					<label for='slide'>this is slide value is:</label>
+					<input type='range' name='slide' id='slide' value='0' min='-50' max='50'/>
+
+					<label for='slide2'>Ñ¡Ïî:</label>
+					<select name='slide2' id='slide2' data-role='slide'>
+						<option value='off'>Like</option>
+						<option value='on'>DisLike</option>
+					</select>
+
+					<label for='selectTest'>Ñ¡ÔñÆ÷£º</label>
+					<select name='selectTest' id='selectTest' >
+						<option value='standard'>Tired</option>
+						<option value='standard'>Happy</option>
+						<option value='standard'>Sick</option>
+						<option value='standard'>Sunny</option>
+					</select>
+				</div>
+				
+			</div>
+			<!-- /content -->
+
+			<div data-role="footer">
+				<h4>
+					Page Footer
+				</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+
+	</body>
+</html>
