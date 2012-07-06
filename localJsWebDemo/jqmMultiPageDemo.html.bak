@@ -17,12 +17,12 @@
 
 		<div data-role="page" id='home' data-theme='b'>
 
-			<header data-role="header" data-theme='b'>
+			<div data-role="header" data-theme='b'>
 				<h1 id='my_home'>
 					Home page
 				</h1>
 				<a href='#about' data-icon='gear' class='ui-btn-right'>about My Site</a>
-			</header>
+			</div>
 			<!-- /header -->
 
 			<div data-role="content">
